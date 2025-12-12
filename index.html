@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Form</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="validation.js" defer></script>
+</head>
+<body>
+  <div class="form-container">
+    <h2>User Information Form</h2>
+    <form id="userForm" action="insert.php" method="POST" target="dataFrame" onsubmit="return validateForm()">
+      <label for="firstName">First Name:</label>
+      <input type="text" id="firstName" name="firstName" required>
+
+      <label for="middleName">Middle Name:</label>
+      <input type="text" id="middleName" name="middleName">
+
+      <label for="lastName">Last Name:</label>
+      <input type="text" id="lastName" name="lastName" required>
+
+      <label for="contactNo">Contact No:</label>
+      <input type="text" id="contactNo" name="contactNo" required>
+
+      <label for="email">Email:</label>
+      <input type="text" id="email" name="email" required>
+
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+
+  <iframe name="dataFrame" style="width:100%; border:none; height:400px; margin-top:20px;"></iframe>
+</body>
+</html>
